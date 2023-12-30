@@ -19,6 +19,7 @@ namespace Nickle
 		{
 			std::stringstream ss{};
 			ss << "MouseMovedEvent: " << m_MouseX << " , " << m_MouseY;
+			return ss.str();
 		}
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
@@ -40,7 +41,7 @@ namespace Nickle
 		std::string ToString() const override
 		{
 			std::stringstream ss{};
-			ss << "MouseScrolledEvent: " << m_ScrollX << " , " << m_ScrollY;
+			ss << "MouseScrolledEvent: " << m_ScrollX << ", " << m_ScrollY;
 			return ss.str();
 		}
 

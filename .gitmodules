@@ -1,3 +1,6 @@
 [submodule "Nickle/vendor/spdlog"]
 	path = Nickle/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Nickle/vendor/GLFW"]
+	path = Nickle/vendor/GLFW
+	url = https://github.com/TheCherno/glfw/

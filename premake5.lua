@@ -9,6 +9,13 @@ workspace "NickleEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nickle/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nickle/vendor/Glad/include"
+
+include "Nickle/vendor/GLFW"
+include "Nickle/vendor/Glad"
+
 project "Nickle"
 	location "Nickle"
 	kind "SharedLib"
@@ -29,7 +36,16 @@ project "Nickle"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
+	}
+
+	links
+	{
+		"GLFW",
+		"Glad",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -40,7 +56,8 @@ project "Nickle"
 		defines
 		{
 			"NK_PLATFORM_WINDOWS",
-			"NK_BUILD_DLL"
+			"NK_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -50,14 +67,17 @@ project "Nickle"
 
 	filter "configurations:Debug"
 		defines "NK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "NK_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NK_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -97,12 +117,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "NK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "NK_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NK_DIST"
+		buildoptions "/MD"
 		optimize "On"

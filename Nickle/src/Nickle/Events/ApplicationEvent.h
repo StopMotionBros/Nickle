@@ -63,6 +63,13 @@ namespace Nickle
 		inline int GetX() { return m_PosX; }
 		inline int GetY() { return m_PosY; }
 
+		std::string ToString() const override
+		{
+			std::stringstream ss{};
+			ss << "WindowMovedEvent: " << m_PosX << ", " << m_PosY;
+			return ss.str();
+		}
+
 		EVENT_CLASS_CATEGORY(EventCategoryApplication);
 		EVENT_CLASS_TYPE(WindowMoved);
 

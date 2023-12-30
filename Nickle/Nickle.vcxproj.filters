@@ -7,6 +7,12 @@
     <Filter Include="Nickle\Events">
       <UniqueIdentifier>{3F9DF418-AB5D-704F-7498-B9CCE017B52B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nickle.h" />
@@ -31,8 +37,20 @@
     <ClInclude Include="src\Nickle\Events\MouseEvent.h">
       <Filter>Nickle\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nickle\Layer.h">
+      <Filter>Nickle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nickle\LayerStack.h">
+      <Filter>Nickle</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nickle\Log.h">
       <Filter>Nickle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nickle\Window.h">
+      <Filter>Nickle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\nkpch.h" />
   </ItemGroup>
@@ -40,8 +58,17 @@
     <ClCompile Include="src\Nickle\Application.cpp">
       <Filter>Nickle</Filter>
     </ClCompile>
+    <ClCompile Include="src\Nickle\Layer.cpp">
+      <Filter>Nickle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nickle\LayerStack.cpp">
+      <Filter>Nickle</Filter>
+    </ClCompile>
     <ClCompile Include="src\Nickle\Log.cpp">
       <Filter>Nickle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\nkpch.cpp" />
   </ItemGroup>

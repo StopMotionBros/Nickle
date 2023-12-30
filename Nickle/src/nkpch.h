@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Nickle/Log.h"
+
 #ifdef NK_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif
