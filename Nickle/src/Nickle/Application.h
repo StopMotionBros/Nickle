@@ -4,7 +4,7 @@
 
 namespace Nickle
 {
-	class NK_API Application
+	class NICKLE_API Application
 	{
 	public:
 		Application();
