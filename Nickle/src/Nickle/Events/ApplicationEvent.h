@@ -4,10 +4,10 @@
 
 namespace Nickle
 {
-	class NICKLE_API WindowResizeEvent : public Event
+	class NICKLE_API WindowResizedEvent : public Event
 	{
 	public:
-		WindowResizeEvent(int width, int height) :
+		WindowResizedEvent(int width, int height) :
 			m_Width(width), m_Height(height){}
 
 		inline int GetWidth() { return m_Width; }

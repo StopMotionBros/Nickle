@@ -8,7 +8,6 @@ public:
 
 	void OnUpdate() override
 	{
-		NK_INFO("Updating TestLayer.");
 	}
 
 	void OnEvent(Nickle::Event& e) override
@@ -23,6 +22,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new TestLayer());
+		PushLayer(new Nickle::ImGuiLayer());
 	}
 
 	~Sandbox()

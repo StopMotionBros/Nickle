@@ -4,3 +4,6 @@
 [submodule "Nickle/vendor/GLFW"]
 	path = Nickle/vendor/GLFW
 	url = https://github.com/TheCherno/glfw/
+[submodule "Nickle/vendor/ImGui"]
+	path = Nickle/vendor/ImGui
+	url = https://github.com/TheCherno/ImGui

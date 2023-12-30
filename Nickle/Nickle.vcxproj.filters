@@ -53,6 +53,10 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\nkpch.h" />
+    <ClInclude Include="src\Nickle\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Nickle\Events\ImGuiEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nickle\Application.cpp">
@@ -71,5 +75,7 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\nkpch.cpp" />
+    <ClCompile Include="src\Nickle\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

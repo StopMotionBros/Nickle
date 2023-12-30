@@ -60,7 +60,7 @@ namespace Nickle
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
 			{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-				WindowResizeEvent event(width, height);
+				WindowResizedEvent event(width, height);
 				data.EventCallback(event);
 				data.Width = width;
 				data.Height = height;
@@ -105,6 +105,13 @@ namespace Nickle
 						break;
 					}
 				}
+			});
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int codePoint)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				KeyTypedEvent event(codePoint);
+				data.EventCallback(event);
 			});
 
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
